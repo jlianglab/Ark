@@ -151,7 +151,7 @@ def main(args):
                                  augment=build_transform_classification(normalize=args.normalization, mode="test"))
         )
 
-    ark_engine(args, model_path, output_path, args.dataset_list, datasets_config, dataset_train_list, dataset_val_list, dataset_test_list, finetune_dataset)
+    ark_engine(args, model_path, output_path, args.dataset_list, datasets_config, dataset_train_list, dataset_val_list, dataset_test_list)
 
 if __name__ == '__main__':
     args = get_args_parser()

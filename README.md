@@ -20,7 +20,8 @@ International Conference on Medical Image Computing and Computer Assisted Interv
 
 ### Requirements
 + Python
-+ Install PyTorch ([pytorch.org](http://pytorch.org))
++ PyTorch ([pytorch.org](http://pytorch.org))
+
 
 
 ## Pre-trained models

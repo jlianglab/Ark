@@ -3,7 +3,8 @@ torchvision
 pydicom
 opencv-python
 scikit-image
+scikit-learn
 albumentations
-yaml
+PyTAML
 tqdm
-timm
+timm == 0.5.4

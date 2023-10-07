@@ -19,7 +19,7 @@ from torch.utils.data import DataLoader
 #from torch.optim.lr_scheduler import ReduceLROnPlateau
 from trainer import train_one_epoch, test_classification, evaluate
 #import segmentation_models_pytorch as smp
-from utils import cosine_anneal_schedule,dice,mean_dice_coef
+# from utils import cosine_anneal_schedule,dice,mean_dice_coef
 
 from timm.scheduler import create_scheduler
 from timm.optim import create_optimizer
@@ -31,7 +31,7 @@ import torch.nn as nn
 
 sys.setrecursionlimit(40000)
 
-def ark_engine(args, model_path, output_path, dataset_list, datasets_config, dataset_train_list, dataset_val_list, dataset_test_list, finetune_dataset):
+def ark_engine(args, model_path, output_path, dataset_list, datasets_config, dataset_train_list, dataset_val_list, dataset_test_list):
     device = torch.device(args.device)
     cudnn.benchmark = True
 

@@ -1,5 +1,5 @@
 ChestXray14: 
-  data_dir: /ocean/projects/bcs190005p/shared/jpang12/nih_xray14/images/images
+  data_dir: <PATH_TO_DATASET>/nih_xray14/images/images
   train_list: dataset/Xray14_train_official.txt
   val_list: dataset/Xray14_val_official.txt
   test_list:  dataset/Xray14_test_official.txt
@@ -7,7 +7,7 @@ ChestXray14:
   task_type: multi-label classification
 
 CheXpert: 
-  data_dir: /ocean/projects/bcs190005p/shared/jpang12/
+  data_dir: <PATH_TO_DATASET>/
   train_list: dataset/CheXpert-v1.0_train.csv
   val_list: dataset/CheXpert-v1.0_valid.csv
   test_list: dataset/CheXpert-v1.0_valid.csv
@@ -16,7 +16,7 @@ CheXpert:
   task_type: multi-label classification
 
 Shenzhen: 
-  data_dir: /ocean/projects/bcs190005p/shared/jpang12/ShenzhenHospitalXray/ChinaSet_AllFiles/CXR_png/
+  data_dir: <PATH_TO_DATASET>/ShenzhenHospitalXray/ChinaSet_AllFiles/CXR_png/
   train_list: dataset/ShenzenCXR_train_data.txt
   val_list: dataset/ShenzenCXR_valid_data.txt
   test_list: dataset/ShenzenCXR_test_data.txt
@@ -24,7 +24,7 @@ Shenzhen:
   task_type: binary classification
 
 VinDrCXR: 
-  data_dir: /ocean/projects/bcs190005p/shared/jpang12/VinDr-CXR/physionet.org/files/vindr-cxr/1.0.0/
+  data_dir: <PATH_TO_DATASET>/VinDr-CXR/physionet.org/files/vindr-cxr/1.0.0/
   train_list: dataset/VinDrCXR_train_pe_global_one.txt
   val_list: dataset/VinDrCXR_test_pe_global_one.txt
   test_list: dataset/VinDrCXR_test_pe_global_one.txt
@@ -32,7 +32,7 @@ VinDrCXR:
   task_type: multi-label classification
 
 RSNAPneumonia: 
-  data_dir: /ocean/projects/bcs190005p/shared/jpang12/rsna-pneumonia-detection-challenge/stage_2_train_images_png/
+  data_dir: <PATH_TO_DATASET>/rsna-pneumonia-detection-challenge/stage_2_train_images_png/
   train_list: dataset/RSNAPneumonia_train.txt
   val_list: dataset/RSNAPneumonia_val.txt
   test_list: dataset/RSNAPneumonia_test.txt
@@ -40,7 +40,7 @@ RSNAPneumonia:
   task_type: multi-class classification
 
 MIMIC: 
-  data_dir: /data/jliang12/jpang12/dataset/MIMIC_jpeg/physionet.org/files/mimic-cxr-jpg/2.0.0/
+  data_dir: <PATH_TO_DATASET>/MIMIC_jpeg/physionet.org/files/mimic-cxr-jpg/2.0.0/
   train_list: dataset/mimic-cxr-2.0.0-train.csv
   val_list: dataset/mimic-cxr-2.0.0-validate.csv
   test_list: dataset/mimic-cxr-2.0.0-test.csv

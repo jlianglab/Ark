@@ -40,8 +40,6 @@ def train_one_epoch(model, use_head_n, dataset, data_loader_train, device, crite
 
         if i % 50 == 0:
             progress.display(i)
-            save_image(samples1[0].cpu().numpy().transpose(1, 2, 0), "Models/student"+str(i))
-            save_image(samples2[0].cpu().numpy().transpose(1, 2, 0),"Models/teacher"+str(i))
 
         if ema_mode == "iteration":
             ema_update_teacher(model, teacher, momentum_schedule, it)

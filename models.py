@@ -9,7 +9,6 @@ import timm.models.swin_transformer as swin
  
 from timm.models.helpers import load_state_dict
 
-from utils import remap_pretrained_keys_swin
 
 class ArkSwinTransformer(swin.SwinTransformer):
     def __init__(self, num_classes_list, projector_features = None, use_mlp=False, *args, **kwargs):
