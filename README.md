@@ -17,6 +17,15 @@ International Conference on Medical Image Computing and Computer Assisted Interv
 
 [Paper](https://link.springer.com/chapter/10.1007/978-3-031-43907-0_62) | [Code](https://github.com/jlianglab/Ark) | [Poster](media/Ark_poster.pdf) | [Slides]() | Presentation ([YouTube]())
 
+## Dataset
+1. [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/)
+2. [ChestX-ray14](https://nihcc.app.box.com/v/ChestXray-NIHCC)
+3. [RSNA Pneumonia](https://www.kaggle.com/c/rsna-pneumonia-detection-challenge)
+4. [VinDrCXR](https://vindr.ai/datasets/cxr)
+5. [Shenzhen](https://lhncbc.nlm.nih.gov/LHC-downloads/downloads.html#tuberculosis-image-data-sets)
+6. [MIMIC](https://physionet.org/content/mimic-cxr/2.0.0/)
+
+
 ## Code
 ### Requirements
 + Python
