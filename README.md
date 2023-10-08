@@ -46,7 +46,14 @@ Modify <PATH_TO_DATASET> in [datasets_config.yaml](./datasets_config.yaml) for e
 ### Train an Ark model
 ```
 # Train Ark-6 with six public datasets
-python main_classification.py --data_set MIMIC --data_set CheXpert --data_set ChestXray14 --data_set RSNAPneumonia --data_set VinDrCXR --data_set Shenzhen --opt sgd --warmup-epochs 20  --lr 0.3 --batch_size 200 --model swin_base --init imagenet  --pretrain_epochs 200  --test_epoch 10  --pretrained_weights https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224_22kto1k.pth --momentum_teacher 0.9  --projector_features 1376  --exp_name projector_1376
+python main_ark.py --data_set MIMIC --data_set CheXpert 
+--data_set ChestXray14 --data_set RSNAPneumonia 
+--data_set VinDrCXR --data_set Shenzhen 
+--opt sgd --warmup-epochs 20  --lr 0.3 
+--batch_size 200 --model swin_base --init imagenet  
+--pretrain_epochs 200  --test_epoch 10 
+--pretrained_weights https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224_22kto1k.pth 
+--momentum_teacher 0.9  --projector_features 1376  
 
 ```
 
@@ -77,14 +84,14 @@ $ git clone https://github.com/jlianglab/BenchmarkTransformers.git
 $ cd BenchmarkTransformers
 ```
 ```
-python main_classification.py --data_set ChestXray14  \
---model swin_base \
---init ark \
---pretrained_weights [PATH_TO_MODEL]/ark6_teacher_ep200_swinb_projector1376_mlp.pth.tar \
---data_dir [PATH_TO_DATASET] \
---train_list dataset/Xray14_train_official.txt \
---val_list dataset/Xray14_val_official.txt \
---test_list dataset/Xray14_test_official.txt \
+python main_classification.py --data_set ChestXray14  
+--model swin_base 
+--init ark 
+--pretrained_weights [PATH_TO_MODEL]/ark6_teacher_ep200_swinb_projector1376_mlp.pth.tar 
+--data_dir [PATH_TO_DATASET] 
+--train_list dataset/Xray14_train_official.txt 
+--val_list dataset/Xray14_val_official.txt 
+--test_list dataset/Xray14_test_official.txt 
 --lr 0.01 --opt sgd --epochs 200 --warmup-epochs 0 --batch_size 64
 ```
 
