@@ -27,15 +27,11 @@ def get_args_parser():
                       default="Random", type="string")
     parser.add_option("--pretrained_weights", dest="pretrained_weights", help="Path to the Pretrained model", default=None, type="string")
     parser.add_option("--from_checkpoint", dest="from_checkpoint", help="whether load pretrained weights from checkpoint", default=False, action="callback", callback=vararg_callback_bool)
-    # parser.add_option("--num_class", dest="num_class", help="number of the classes in the downstream task",
-    #                   default=14, type="int")
     parser.add_option("--data_set", dest="dataset_list", help="ChestXray14|CheXpert|Shenzhen|VinDrCXR|RSNAPneumonia",  action="append")
-    # parser.add_option("--finetune_dataset", dest="finetune_dataset", help="ChestXray14|CheXpert|Shenzhen|VinDrCXR|RSNAPneumonia", default="VinDrCXR", type="string")
     parser.add_option("--normalization", dest="normalization", help="how to normalize data (imagenet|chestx-ray)", default="imagenet",
                       type="string")
     parser.add_option("--img_size", dest="img_size", help="input image resolution", default=224, type="int")
     parser.add_option("--img_depth", dest="img_depth", help="num of image depth", default=3, type="int")
-    # parser.add_option("--mode", dest="mode", help="train | test", default="train", type="string")
     parser.add_option("--batch_size", dest="batch_size", help="batch size", default=32, type="int")
     parser.add_option("--epochs", dest="epochs", help="num of epoches", default=200, type="int")
     parser.add_option("--exp_name", dest="exp_name", default="", type="string")
@@ -45,11 +41,7 @@ def get_args_parser():
         parameter for teacher update. The value is increased to 1 during training with cosine schedule.
         We recommend setting a higher value with small batches: for example use 0.9995 with batch size of 256.""")
     parser.add_option("--pretrain_epochs", dest="pretrain_epochs", help="num of omni-pretraining epoches", default=10, type="int")
-    # parser.add_option("--reinit_heads", dest="reinit_heads", help="whether re-initialize the heads from pre-trained model", default=False, action="callback", callback=vararg_callback_bool)
     parser.add_option("--test_epoch", dest="test_epoch", help="whether test after every epoch", default=1, type="int")                
-    # parser.add_option("--reuse_head", dest="reuse_head", help="whether reuse the head from pre-trained model", default=False, action="callback",
-    #                   callback=vararg_callback_bool)
-    # parser.add_option("--copy_head", dest="copy_head", help="copy the weights of head x to head y (e.g., 0-4)", default='', type="string")
     parser.add_option("--val_loss_metric", dest="val_loss_metric", help="which validation loss for early stop and model save (average | [dataset])", default="average", type="string")                  
     parser.add_option("--projector_features", dest="projector_features", help="num of projector features", default=1376, type="int")
     parser.add_option("--use_mlp", dest="use_mlp", help="whether use mlp for projector", default=False, action="callback",
@@ -94,14 +86,6 @@ def get_args_parser():
     parser.add_option('--patience-epochs', type=int, default=10, metavar='N',
                         help='patience epochs for Plateau LR scheduler (default: 10')
 
-
-    # parser.add_option("--patience", dest="patience", help="num of patient epoches", default=10, type="int")
-    # parser.add_option("--early_stop", dest="early_stop", help="whether use early_stop", default=True, action="callback",
-    #                   callback=vararg_callback_bool)
-    # parser.add_option("--trial", dest="num_trial", help="number of trials", default=1, type="int")
-    # parser.add_option("--start_index", dest="start_index", help="the start model index", default=0, type="int")
-    # parser.add_option("--clean", dest="clean", help="clean the existing data", default=False, action="callback",
-    #                   callback=vararg_callback_bool)
     parser.add_option("--resume", dest="resume", help="whether latest checkpoint", default=False, action="callback",
                       callback=vararg_callback_bool)
     parser.add_option("--workers", dest="workers", help="number of CPU workers", default=8, type="int")

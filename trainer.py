@@ -4,7 +4,7 @@ import torch
 from tqdm import tqdm
 # import wandb
 
-def train_one_epoch(model, use_head_n, dataset, data_loader_train, device, criterion, optimizer, epoch, ema_mode, teacher, momentum_schedule, it):
+def train_one_epoch(model, use_head_n, dataset, data_loader_train, device, criterion, optimizer, epoch, ema_mode, teacher, momentum_schedule, coef_schedule, it):
     batch_time = MetricLogger('Time', ':6.3f')
     losses_cls = MetricLogger('Loss_'+dataset+' cls', ':.4e')
     losses_mse = MetricLogger('Loss_'+dataset+' mse', ':.4e')
@@ -15,8 +15,8 @@ def train_one_epoch(model, use_head_n, dataset, data_loader_train, device, crite
 
     model.train()
     MSE = torch.nn.MSELoss()
-    # coefficient scheduler from  0 to 0.5 by using the momentum scheduler from 0.9 to 1
-    coff = (momentum_schedule[it] - 0.9) * 5
+    # coefficient scheduler from  0 to 0.5 
+    coff = coef_schedule[it]
     print(coff)
     end = time.time()
     for i, (samples1, samples2, targets) in enumerate(data_loader_train):

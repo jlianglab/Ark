@@ -16,10 +16,7 @@ from sklearn.metrics import accuracy_score
 import torch
 import torch.backends.cudnn as cudnn
 from torch.utils.data import DataLoader
-#from torch.optim.lr_scheduler import ReduceLROnPlateau
 from trainer import train_one_epoch, test_classification, evaluate
-#import segmentation_models_pytorch as smp
-# from utils import cosine_anneal_schedule,dice,mean_dice_coef
 
 from timm.scheduler import create_scheduler
 from timm.optim import create_optimizer
@@ -90,12 +87,15 @@ def ark_engine(args, model_path, output_path, dataset_list, datasets_config, dat
     if args.ema_mode == "epoch":
         momentum_schedule = cosine_scheduler(args.momentum_teacher, 1,
                                                args.pretrain_epochs, len(dataset_list))
+        coef_schedule = cosine_scheduler(0, 0.5, args.pretrain_epochs, len(dataset_list))
     elif args.ema_mode == "iteration":
         iters_per_epoch = 0
         for d in data_loader_list_train:
             iters_per_epoch += len(d)
         momentum_schedule = cosine_scheduler(args.momentum_teacher, 1,
-                                               args.pretrain_epochs, iters_per_epoch)
+                                               args.pretrain_epochs, iters_per_epoch) 
+        coef_schedule = cosine_scheduler(0, 0.5, args.pretrain_epochs, iters_per_epoch)
+        
 
     optimizer = create_optimizer(args, model)
     lr_scheduler, _ = create_scheduler(args, optimizer)
@@ -160,7 +160,7 @@ def ark_engine(args, model_path, output_path, dataset_list, datasets_config, dat
     it = start_epoch * len(dataset_list)
     for epoch in range(start_epoch, args.pretrain_epochs):
         for i, data_loader in enumerate(data_loader_list_train): 
-            train_one_epoch(model, i, dataset_list[i], data_loader, device, criterion, optimizer, epoch, args.ema_mode, teacher, momentum_schedule, it)
+            train_one_epoch(model, i, dataset_list[i], data_loader, device, criterion, optimizer, epoch, args.ema_mode, teacher, momentum_schedule, coef_schedule, it)
             it += 1
         val_loss_list = []
         for i, dv in enumerate(data_loader_list_val):
