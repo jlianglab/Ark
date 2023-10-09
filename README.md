@@ -12,7 +12,7 @@ We develop **open Foundation Models** from numerous public datasets using their 
 
 International Conference on Medical Image Computing and Computer Assisted Intervention ([MICCAI 2023](https://conferences.miccai.org/2023/en/))
 
-[Paper](https://link.springer.com/chapter/10.1007/978-3-031-43907-0_62) | [Code](https://github.com/jlianglab/Ark) | [Poster](media/Ark_poster.pdf) | [Slides]() | Presentation ([YouTube]())
+[Paper](https://link.springer.com/chapter/10.1007/978-3-031-43907-0_62) | [Code](https://github.com/jlianglab/Ark) | [Poster](media/Ark_poster.pdf) | Presentation ([YouTube](https://youtu.be/-gq1Zl-mh60), [BiliBili](https://www.bilibili.com/video/BV1ww411Y7Yv/))
 
 ## Dataset
 1. [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/)
