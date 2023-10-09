@@ -5,9 +5,6 @@
 We develop **open Foundation Models** from numerous public datasets using their heterogeneous expert annotations. Our Ark models outperform SOTA fully/self-supervised methods on various thoracic disease classification tasks and organ/bones segmentation tasks. Ark offers embeddings with superior quality over [Google's CXR Foundation Model](https://github.com/Google-Health/imaging-research/tree/master/cxr-foundation).
 
 
-
-
-
 ## Publication
 <b>Foundation Ark: Accruing and Reusing Knowledge for Superior and Robust Performance </b> <br/>
 [DongAo Ma](https://www.linkedin.com/in/dongaoma/)<sup>1</sup>, [Jiaxuan Pang](https://www.linkedin.com/in/jiaxuan-pang-b014ab127/)<sup>1</sup>, [Michael B. Gotway](https://www.mayoclinic.org/biographies/gotway-michael-b-m-d/bio-20055566)<sup>2</sup>, [Jianming Liang](https://chs.asu.edu/jianming-liang)<sup>1</sup><br/>
