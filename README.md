@@ -84,7 +84,7 @@ for k in ['head.weight', 'head.bias', 'head_dist.weight', 'head_dist.bias']:
 model.load_state_dict(state_dict, strict=False)
 ```
 ### Finetune the model on target tasks
-We have integrated Ark pretrained models
+We have integrated Ark pretrained models in our [Benchmark Tansformers GitHub Repository](https://github.com/jlianglab/BenchmarkTransformers)
 ```
 $ git clone https://github.com/jlianglab/BenchmarkTransformers.git
 $ cd BenchmarkTransformers
