@@ -6,7 +6,7 @@ We develop **open Foundation Models** from numerous public datasets using their 
 
 ## Poster Presentation (click for playing [[Youtube](https://www.youtube.com/watch?v=VWlbczuZN7E)] [[BiliBili](https://www.bilibili.com/video/BV14C4y1d7rR/)])
 [![Poster Presentation](media/Ark_poster.jpg)](https://www.youtube.com/watch?v=VWlbczuZN7E)
-### [Zoom Poster Q&A Session (Oct 9th, 4:00pm - 5:30pm)](https://asu.zoom.us/j/82778432919?pwd=c0xtWHRtQ1VzYitHMzhsVHY1SjRXZz09)
+
 
 ## Publication
 <b>Foundation Ark: Accruing and Reusing Knowledge for Superior and Robust Performance </b> <br/>
@@ -15,7 +15,13 @@ We develop **open Foundation Models** from numerous public datasets using their 
 
 International Conference on Medical Image Computing and Computer Assisted Intervention ([MICCAI 2023](https://conferences.miccai.org/2023/en/)) (Oral + Poster)
 
+★ [Best Paper Award Runner-up](http://www.miccai.org/about-miccai/awards/best-paper-award-and-young-scientist-award/)
+
+★ [MICCAI 2023 STAR Awards](https://conferences.miccai.org/2023/en/MICCAI-2023-STudent-Author-Registration-(STAR)-Awards.html)
+
 [Paper](https://link.springer.com/chapter/10.1007/978-3-031-43907-0_62) ([PDF](https://rdcu.be/dnwdJ)) | [Code](https://github.com/jlianglab/Ark) | [Poster](media/Ark_poster.pdf) | Oral Presentation ([YouTube](https://youtu.be/-gq1Zl-mh60), [BiliBili](https://www.bilibili.com/video/BV1ww411Y7Yv/))
+
+<p align="left"><img width=50% alt="FrontCover" src="media/BestPaperRunnerUp.JPG"></p>
 
 ## Dataset
 1. [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/)
