@@ -133,11 +133,11 @@ class ChestXray14(Dataset):
       student_img, teacher_img = self.augment(imageData), self.augment(imageData)   
     else:
       imageData = (np.array(imageData)).astype('uint8')
-      augmented = self.train_augment(image = imageData)
+      augmented = self.train_augment(image = imageData, mask = imageData)
       student_img = augmented['image']
+      teacher_img = augmented['mask']
       student_img=np.array(student_img) / 255.
-
-      teacher_img=np.array(imageData) / 255.
+      teacher_img=np.array(teacher_img) / 255.
       
       mean, std = [0.485, 0.456, 0.406], [0.229, 0.224, 0.225]
       student_img = (student_img-mean)/std
@@ -349,13 +349,12 @@ class VinDrCXR(Dataset):
       student_img, teacher_img = self.augment(imageData), self.augment(imageData)   
     else:
       imageData = (np.array(imageData)).astype('uint8')
-      augmented = self.train_augment(image = imageData)#, mask = imageData)
+      augmented = self.train_augment(image = imageData, mask = imageData)
       student_img = augmented['image']
-      #teacher_img = augmented['mask']
+      teacher_img = augmented['mask']
       student_img=np.array(student_img) / 255.
-      #teacher_img=np.array(teacher_img) / 255.
-      teacher_img=np.array(imageData) / 255.
-
+      teacher_img=np.array(teacher_img) / 255.
+      
       mean, std = [0.485, 0.456, 0.406], [0.229, 0.224, 0.225]
       student_img = (student_img-mean)/std
       teacher_img = (teacher_img-mean)/std
