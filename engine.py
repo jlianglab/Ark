@@ -114,13 +114,6 @@ def ark_engine(args, model_path, output_path, dataset_list, datasets_config, dat
             init_loss = checkpoint['lossMIN']
             state_dict = checkpoint['state_dict']
             teacher_state_dict = checkpoint['teacher']
-            
-            if args.reinit_heads: 
-                for k in model.state_dict().keys():
-                    if k.startswith('omni_heads.'):
-                        print(f"Removing key {k} from pretrained checkpoint")
-                        del state_dict[k]
-
 
             model.load_state_dict(state_dict, strict=True)
             teacher.load_state_dict(teacher_state_dict, strict=True)
