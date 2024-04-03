@@ -75,7 +75,7 @@ python main_ark.py --data_set MIMIC --data_set CheXpert
 
 ## Pre-trained Ark models
 
-You can request the pretrained Ark-5 and Ark-6 models (the teacher model) in our paper throught this [Google Form](https://forms.gle/qkoDGXNiKRPTDdCe8) or [wjx.cn](https://www.wjx.cn/vm/OvwfYFx.aspx#).
+You can request the pretrained Ark-5 and Ark-6 models (the teacher model) in our paper through this [Google Form](https://forms.gle/qkoDGXNiKRPTDdCe8) or [wjx.cn](https://www.wjx.cn/vm/OvwfYFx.aspx#).
 
 
 ### Load the model
