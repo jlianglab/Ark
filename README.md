@@ -21,7 +21,7 @@ International Conference on Medical Image Computing and Computer Assisted Interv
 <p align="left"><img width=50% alt="FrontCover" src="media/BestPaperRunnerUp.JPG"></p>
 
 ## Poster Presentation [[Youtube](https://www.youtube.com/watch?v=VWlbczuZN7E)] [[BiliBili](https://www.bilibili.com/video/BV14C4y1d7rR/)])
-[![Poster Presentation](media/Ark_poster.jpg)](https://www.youtube.com/watch?v=VWlbczuZN7E)
+[![Poster Presentation](media/Ark_poster.jpg)]
 
 ## Dataset
 1. [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/)
