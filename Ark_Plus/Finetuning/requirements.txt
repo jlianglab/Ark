@@ -1,0 +1,18 @@
+numpy==1.21.2
+tqdm
+scikit-image==0.16.2
+scikit-learn==0.22.2.post1
+simpleitk==2.0.2
+scipy
+pydicom
+yacs
+einops
+opencv-python==4.2.0.32
+timm==0.5.4
+transformers==4.1.1 
+albumentations==0.4.3
+imgaug
+Pillow
+pretrainedmodels
+# pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
+# numpy==1.21.2 tqdm scikit-image==0.16.2 scikit-learn==0.22.2.post1 simpleitk==2.0.2 scipy pydicom yacs einops opencv-python==4.2.0.32 timm==0.5.4 transformers==4.1.1  albumentations==0.4.3 imgaug Pillow pretrainedmodels

@@ -1,4 +1,4 @@
-<p align="center"><img width=15% alt="FrontCover" src="media/Ark_logo.png"></p>
+<p align="center"><img width=15% alt="FrontCover" src="Ark_MICCAI2023/media/Ark_logo.png"></p>
 
 # Foundation Ark: Accruing and Reusing Knowledge
 
@@ -16,12 +16,12 @@ International Conference on Medical Image Computing and Computer Assisted Interv
 
 ★ [MICCAI 2023 STAR Awards](https://conferences.miccai.org/2023/en/MICCAI-2023-STudent-Author-Registration-(STAR)-Awards.html)
 
-[Paper](https://link.springer.com/chapter/10.1007/978-3-031-43907-0_62) ([PDF](https://rdcu.be/dnwdJ), [Arxiv](https://arxiv.org/abs/2310.09507)) | [Code](https://github.com/jlianglab/Ark) | [Poster](media/Ark_poster.pdf) | Oral Presentation ([YouTube](https://youtu.be/-gq1Zl-mh60), [BiliBili](https://www.bilibili.com/video/BV1ww411Y7Yv/))
+[Paper](https://link.springer.com/chapter/10.1007/978-3-031-43907-0_62) ([PDF](https://rdcu.be/dnwdJ), [Arxiv](https://arxiv.org/abs/2310.09507)) | [Code](https://github.com/jlianglab/Ark) | [Poster](Ark_MICCAI2023/media/Ark_poster.pdf) | Oral Presentation ([YouTube](https://youtu.be/-gq1Zl-mh60), [BiliBili](https://www.bilibili.com/video/BV1ww411Y7Yv/))
 
-<p align="left"><img width=50% alt="FrontCover" src="media/BestPaperRunnerUp.JPG"></p>
+<p align="left"><img width=50% alt="FrontCover" src="Ark_MICCAI2023/media/BestPaperRunnerUp.JPG"></p>
 
 ## Poster Presentation [[Youtube](https://www.youtube.com/watch?v=VWlbczuZN7E)] [[BiliBili](https://www.bilibili.com/video/BV14C4y1d7rR/)])
-<p align="left"><img width=70% alt="FrontCover" src="media/Ark_poster.jpg"></p>
+[![Poster Presentation](media/Ark_poster.jpg)](https://www.youtube.com/watch?v=VWlbczuZN7E)
 
 ## Dataset
 1. [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/)
@@ -75,7 +75,7 @@ python main_ark.py --data_set MIMIC --data_set CheXpert
 
 ## Pre-trained Ark models
 
-You can request the pretrained Ark-5 and Ark-6 models (the teacher model) in our paper through this [Google Form](https://forms.gle/qkoDGXNiKRPTDdCe8) or [wjx.cn](https://www.wjx.cn/vm/OvwfYFx.aspx#).
+You can request the pretrained Ark-5 and Ark-6 models (the teacher model) in our paper throught this [Google Form](https://forms.gle/qkoDGXNiKRPTDdCe8) or [wjx.cn](https://www.wjx.cn/vm/OvwfYFx.aspx#).
 
 
 ### Load the model

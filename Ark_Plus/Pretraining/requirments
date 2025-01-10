@@ -1,0 +1,10 @@
+torch 
+torchvision
+pydicom
+opencv-python
+scikit-image
+scikit-learn
+albumentations
+PyTAML
+tqdm
+timm == 0.5.4

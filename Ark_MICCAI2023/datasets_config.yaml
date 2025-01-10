@@ -1,0 +1,49 @@
+ChestXray14: 
+  data_dir: <PATH_TO_DATASET>/nih_xray14/images/images
+  train_list: dataset/Xray14_train_official.txt
+  val_list: dataset/Xray14_val_official.txt
+  test_list:  dataset/Xray14_test_official.txt
+  diseases: ['Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 'Pneumonia', 'Pneumothorax', 'Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia']
+  task_type: multi-label classification
+
+CheXpert: 
+  data_dir: <PATH_TO_DATASET>/
+  train_list: dataset/CheXpert-v1.0_train.csv
+  val_list: dataset/CheXpert-v1.0_valid.csv
+  test_list: dataset/CheXpert-v1.0_valid.csv
+  diseases: ['No Finding', 'Enlarged Cardiomediastinum', 'Cardiomegaly', 'Lung Opacity', 'Lung Lesion', 'Edema', 'Consolidation', 'Pneumonia', 'Atelectasis', 'Pneumothorax', 'Pleural Effusion', 'Pleural Other', 'Fracture', 'Support Devices']
+  test_diseases_name: ['Atelectasis', 'Cardiomegaly', 'Consolidation', 'Edema', 'Pleural Effusion']
+  task_type: multi-label classification
+
+Shenzhen: 
+  data_dir: <PATH_TO_DATASET>/ShenzhenHospitalXray/ChinaSet_AllFiles/CXR_png/
+  train_list: dataset/ShenzenCXR_train_data.txt
+  val_list: dataset/ShenzenCXR_valid_data.txt
+  test_list: dataset/ShenzenCXR_test_data.txt
+  diseases: ['TB']
+  task_type: binary classification
+
+VinDrCXR: 
+  data_dir: <PATH_TO_DATASET>/VinDr-CXR/physionet.org/files/vindr-cxr/1.0.0/
+  train_list: dataset/VinDrCXR_train_pe_global_one.txt
+  val_list: dataset/VinDrCXR_test_pe_global_one.txt
+  test_list: dataset/VinDrCXR_test_pe_global_one.txt
+  diseases: ['PE', 'Lung tumor', 'Pneumonia', 'Tuberculosis', 'Other diseases', 'No finding']
+  task_type: multi-label classification
+
+RSNAPneumonia: 
+  data_dir: <PATH_TO_DATASET>/rsna-pneumonia-detection-challenge/stage_2_train_images_png/
+  train_list: dataset/RSNAPneumonia_train.txt
+  val_list: dataset/RSNAPneumonia_val.txt
+  test_list: dataset/RSNAPneumonia_test.txt
+  diseases: ['Normal', 'No Lung Opacity/Not Normal', 'Lung Opacity']
+  task_type: multi-class classification
+
+MIMIC: 
+  data_dir: <PATH_TO_DATASET>/MIMIC_jpeg/physionet.org/files/mimic-cxr-jpg/2.0.0/
+  train_list: dataset/mimic-cxr-2.0.0-train.csv
+  val_list: dataset/mimic-cxr-2.0.0-validate.csv
+  test_list: dataset/mimic-cxr-2.0.0-test.csv
+  diseases: ['No Finding', 'Enlarged Cardiomediastinum', 'Cardiomegaly', 'Lung Opacity', 'Lung Lesion', 'Edema', 'Consolidation', 'Pneumonia', 'Atelectasis', 'Pneumothorax', 'Pleural Effusion', 'Pleural Other', 'Fracture', 'Support Devices']
+  test_diseases_name: ['Atelectasis', 'Cardiomegaly', 'Consolidation', 'Edema', 'Pleural Effusion']
+  task_type: multi-label classification
