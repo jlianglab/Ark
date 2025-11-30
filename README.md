@@ -20,7 +20,8 @@ We develop **Open Foundation Models** from numerous public datasets using their 
 This article is the culmination of a technological investigation into
 methodology for fully supervised learning from heterogeneous labels
 associated with numerous (big or small and public or private) datasets.
-[Paper](https://doi.org/10.1016/j.media.2025.103828) ([Free access before 1/18/2026](https://authors.elsevier.com/c/1mBTE4rfPmLfNV))
+
+[Paper](https://doi.org/10.1016/j.media.2025.103828) ([Free access](https://authors.elsevier.com/c/1mBTE4rfPmLfNV) before 1/18/2026)
 
 
 <b>Foundation Ark: Accruing and Reusing Knowledge for Superior and Robust Performance </b> <br/>
