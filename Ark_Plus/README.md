@@ -1,13 +1,5 @@
 ## A Fully Open, AI Foundation Model Using Heterogeneous Labels Applied to Chest Radiography
 
-Due to the large size of the datasets, it is not feasible to upload the data and set up a reproducible run of pretraining and finetuning on CodeOcean. Instead, we provide a guideline for the experimental setup and the necessary running commands for **pretraining** and **finetuning**. 
-
-Reproducible runs for **linear-probing** evaluation for Ark+ and CXR Foundation Model on the ChestDR and VinDr-CXR datasets are set up in the `run_linearprobing.sh` file. The pre-generated embeddings of the two models are stored in `.npy` files and uploaded in the `data/ ` forder.
-
-The scripts for generating predictions using the pretraining Ark+ without further training are available in `Zeroshot/Ark+zeroshot-pred.ipynb`. All pre-generated prediction values are stored in CSV files in the `zeroshot_pred_csv/` folder. The AUROC curve for **zero-shot** prediction performance is plotted in `Zeroshot.ipynb`.
-
-
-
 ## Dataset
 1. [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/)
 2. [ChestX-ray14](https://nihcc.app.box.com/v/ChestXray-NIHCC)
@@ -36,14 +28,21 @@ $ pip install -r requirements
 ```
 
 ### Setup dataset path
-Modify <PATH_TO_DATASET> in [datasets_config.yaml](./datasets_config.yaml) for each dataset.
+Modify <PATH_TO_DATASET> in [datasets_config.yaml](./Pretraining/datasets_config.yaml) for each dataset.
 
-(To incorporate a new dataset, refer to the examples provided in datasets_config.yaml. Afterwards, create a corresponding dataloader for the dataset in [dataloader.py](./dataloader.py).)
+(To incorporate a new dataset, refer to the examples provided in datasets_config.yaml. Afterwards, create a corresponding dataloader for the dataset in [dataloader.py](./Pretraining/dataloader.py).)
 
 ### Train an Ark+ model
 ```
 # Train Ark+ with six public datasets
 python main_ark.py --data_set MIMIC --data_set CheXpert --data_set ChestXray14 --data_set RSNAPneumonia --data_set VinDrCXR --data_set Shenzhen --opt sgd --warmup-epochs 20  --lr 0.3 --batch_size 50 --model swin_large_768 --init imagenet  --pretrain_epochs 200  --test_epoch 10 --pretrained_weights https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_large_patch4_window12_384_22kto1k.pth --momentum_teacher 0.9  --projector_features 1376  --img_resize 896 --input_size 768
+
+# Train Ark+6 Swin Base version
+python main_ark.py --data_set MIMIC --data_set CheXpert --data_set ChestXray14 --data_set RSNAPneumonia --data_set VinDrCXR --data_set Shenzhen --opt sgd --warmup-epochs 20  --lr 0.3  --batch_size 200 --model swin_base --init imagenet  --pretrain_epochs 200  --test_epoch 10 --pretrained_weights https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224_22kto1k.pth --momentum_teacher 0.9  --projector_features 1376  
+
+# Train Ark+6 ConvNeXt Base version
+
+python main_ark.py --data_set MIMIC --data_set CheXpert --data_set ChestXray14 --data_set RSNAPneumonia --data_set VinDrCXR --data_set Shenzhen --opt sgd --warmup-epochs 20  --lr 0.3 --batch_size 200 --model conv_base --init imagenet  --pretrain_epochs 200 --test_epoch 10  --pretrained_weights https://dl.fbaipublicfiles.com/convnext/convnext_base_22k_1k_224.pth --momentum_teacher 0.9  --projector_features 1376  --exp_name projector_1376
 
 ```
 
@@ -68,4 +67,19 @@ python main_classification.py --data_set ChestXray14
 --pretrained_weights [PATH_TO_ARK_MODEL]
 ```
 
+### Simulate the distributed pretraining across multiple clients
 
+```
+cd Distributed/
+
+# If you have Modified <PATH_TO_DATASET> in datasets_config.yaml
+cp ../Pretraining/dataloader.py .
+
+# Ark+5 Swin-Base ver. (5-client distribution)
+python main_ark_dist.py --opt sgd  --pretrain_epochs 400 --warmup-epochs 20  --lr 0.3 --batch_size 200 --client CheXpert --client ChestXray14 --client RSNAPneumonia --client VinDrCXR --client Shenzhen  --model swin_base --init imagenet --val_loss_metric average  --test_epoch 10  --pretrained_weights https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224_22kto1k.pth --momentum_teacher 0.9  --projector_features 1376  --exp_name Ark+Base_5clients
+
+
+# Ark+ Swin-Large ver. (3-client distribution)
+python main_ark_dist.py --opt sgd  --pretrain_epochs 50 --warmup-epochs 20  --lr 0.3 --batch_size 50 --client MIMIC --client CheXpert,RSNAPneumonia --client ChestXray14,VinDrCXR,Shenzhen  --model swin_large_768 --init imagenet --val_loss_metric average  --test_epoch 10  --pretrained_weights https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_large_patch4_window12_384_22kto1k.pth --momentum_teacher 0.9  --projector_features 1376  --img_resize 896 --input_size 768 --exp_name Ark+Large_3clients
+
+```

@@ -11,12 +11,16 @@ We develop **Open Foundation Models** from numerous public datasets using their 
 <sup>1 </sup>Arizona State University, <sup>2 </sup>Mayo Clinic <br/>
 <b>*Nature* (2025)</b>
 
-[Paper](https://www.nature.com/articles/s41586-025-09079-8) ([PDF](https://rdcu.be/eqx2i), [Supplementary](https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-025-09079-8/MediaObjects/41586_2025_9079_MOESM1_ESM.pdf), [Peer Review](https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-025-09079-8/MediaObjects/41586_2025_9079_MOESM3_ESM.pdf)) | [Github](https://github.com/jlianglab/Ark/tree/main/Ark_Plus) | [CodeOcean](https://codeocean.com/capsule/8456055/tree) for Reprodicible Run
+[Paper](https://www.nature.com/articles/s41586-025-09079-8) ([PDF](https://rdcu.be/eqx2i), [Supplementary](https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-025-09079-8/MediaObjects/41586_2025_9079_MOESM1_ESM.pdf), [Peer Review](https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-025-09079-8/MediaObjects/41586_2025_9079_MOESM3_ESM.pdf)) | [Poster](Ark_MICCAI2023/media/Poster2025.pdf) | [Github](https://github.com/jlianglab/Ark/tree/main/Ark_Plus) | [CodeOcean](https://codeocean.com/capsule/8456055/tree) for Reprodicible Run
 
-<b>Ark+: Accruing and Reusing Knowledge from Heterogeneous Labels across Numerous
-Datasets for Training Superior and Robust AI Foundation Models </b> 
-
-<b>*Medical Image Analysis* (Accepted, to appear in 2025)</b>
+<b>Ark+: Supervised training a single high-performance AI foundation model from many diﬀerently labeled datasets—no label consolidation required </b>  <br/>
+[DongAo Ma](https://www.linkedin.com/in/dongaoma/)<sup>1</sup>, [Jiaxuan Pang](https://www.linkedin.com/in/jiaxuan-pang-b014ab127/)<sup>1</sup>, [Shivasakthi Senthil Velan](https://www.linkedin.com/in/shivasakthi-senthil-velan/)<sup>1</sup>, [Michael B. Gotway](https://www.mayoclinic.org/biographies/gotway-michael-b-m-d/bio-20055566)<sup>2</sup>, [Jianming Liang](https://chs.asu.edu/jianming-liang)<sup>1</sup><br/>
+<sup>1 </sup>Arizona State University, <sup>2 </sup>Mayo Clinic <br/>
+<b>*Medical Image Analysis* (2025)</b> <br/>
+This article is the culmination of a technological investigation into
+methodology for fully supervised learning from heterogeneous labels
+associated with numerous (big or small and public or private) datasets.
+[Paper](https://doi.org/10.1016/j.media.2025.103828) ([Free access before 1/18/2026](https://authors.elsevier.com/c/1mBTE4rfPmLfNV))
 
 
 <b>Foundation Ark: Accruing and Reusing Knowledge for Superior and Robust Performance </b> <br/>
@@ -25,7 +29,7 @@ Datasets for Training Superior and Robust AI Foundation Models </b>
 <b>*International Conference on Medical Image Computing and Computer Assisted Intervention ([MICCAI 2023](https://conferences.miccai.org/2023/en/))*</b> (Oral + Poster)
 
 🏆 [Best Paper Award Runner-up](https://miccai.org/index.php/about-miccai/awards/best-paper-award-and-young-scientist-award/)
-
+ <br/>
 ★ [MICCAI 2023 STAR Awards](https://conferences.miccai.org/2023/en/MICCAI-2023-STudent-Author-Registration-(STAR)-Awards.html)
 
 [Paper](https://link.springer.com/chapter/10.1007/978-3-031-43907-0_62) ([PDF](https://rdcu.be/dnwdJ), [Arxiv](https://arxiv.org/abs/2310.09507)) | [Code](https://github.com/jlianglab/Ark) | [Poster](Ark_MICCAI2023/media/Ark_poster.pdf) | Oral Presentation ([YouTube](https://youtu.be/-gq1Zl-mh60), [BiliBili](https://www.bilibili.com/video/BV1ww411Y7Yv/))
@@ -105,6 +109,18 @@ If you use this code or use our pre-trained weights for your research, please ci
   pages={1--11},
   year={2025},
   publisher={Nature Publishing Group}
+}
+
+@article{ma2026ark+,
+    author = {DongAo Ma and Jiaxuan Pang and Shivasakthi {Senthil Velan} and Michael B. Gotway and Jianming Liang},
+    title = {Ark+: Supervised training a single high-performance AI foundation model from many differently labeled datasets—no label consolidation required},
+    journal = {Medical Image Analysis},
+    volume = {108},
+    pages = {103828},
+    year = {2026},
+    issn = {1361-8415},
+    doi = {https://doi.org/10.1016/j.media.2025.103828},
+    url = {https://www.sciencedirect.com/science/article/pii/S1361841525003743}
 }
 
 @InProceedings{ma2023foundation,

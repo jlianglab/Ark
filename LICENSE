@@ -2,8 +2,7 @@ License Text for ASU GitHub Project
 Copyright 2019 Arizona Board of Regents for and on behalf of Arizona State University, a body corporate 
 Patent Pending in the United States of America
 LICENSE
-Arizona Board of Regents, for and on behalf of Arizona State University, a body corporate (“Licensor”) offers its “A Fully Open AI Foundation Model Applied to Chest Radiography”, “Ark+: Accruing and Reusing Knowledge from Heterogeneous Labels across Numerous
-Datasets for Training Superior and Robust AI Foundation Models” and “Foundation Ark: Accruing and Reusing Knowledge for Superior and Robust Performance” projects (the “Work”) and related Data solely for non-commercial use under the following terms and conditions:
+Arizona Board of Regents, for and on behalf of Arizona State University, a body corporate (“Licensor”) offers its “A Fully Open AI Foundation Model Applied to Chest Radiography”, “Ark+: Supervised training a single high-performance AI foundation model from many differently labeled datasets—no label consolidation required” and “Foundation Ark: Accruing and Reusing Knowledge for Superior and Robust Performance” projects (the “Work”) and related Data solely for non-commercial use under the following terms and conditions:
 1. Definitions.
       "License" means the terms and conditions for use, reproduction, and distribution of the Work and the Data set forth in this document.
       "You" (or "Your") shall mean an individual or entity exercising permissions granted by this License.
