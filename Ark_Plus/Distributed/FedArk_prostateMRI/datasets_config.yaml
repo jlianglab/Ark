@@ -1,0 +1,12 @@
+Camelyon17: 
+  data_dir: /data/jliang12/shared/dataset/Camelyon17/
+  diseases: ['Normal', 'Tumor']
+  sources: ['hospital1', 'hospital2', 'hospital3', 'hospital4', 'hospital5']
+  clients: [[0], [1], [2], [3], [4]]
+  task_type: multi-class classification
+
+ProstateMRI:
+  data_dir: /scratch/dongaoma/FL/HarmoFL/data/prostate/
+  sources: ['BIDMC', 'HK', 'I2CVB', 'ISBI', 'ISBI_1.5', 'UCL']
+  clients: [[0], [1], [2], [3], [4], [5]]
+  task_type: segmentation

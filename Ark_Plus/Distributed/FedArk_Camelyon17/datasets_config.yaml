@@ -1,0 +1,7 @@
+Camelyon17: 
+  data_dir: /data/jliang12/shared/dataset/Camelyon17/
+  diseases: ['Normal', 'Tumor']
+  sources: ['hospital1', 'hospital2', 'hospital3', 'hospital4', 'hospital5']
+  clients: [[0], [1], [2], [3], [4]]
+  start_epoch: [0, 0, 0, 0, 0]
+  task_type: multi-class classification
