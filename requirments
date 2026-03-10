@@ -5,6 +5,6 @@ opencv-python
 scikit-image
 scikit-learn
 albumentations
-PyTAML
+PyYAML
 tqdm
 timm == 0.5.4
