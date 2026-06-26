@@ -50,6 +50,7 @@ associated with numerous (big or small and public or private) datasets.
 ## Pre-trained Ark+ models
 
 You can request the pretrained Ark+ models in our paper throught this [Google Form](https://forms.gle/qkoDGXNiKRPTDdCe8) or [wjx.cn](https://www.wjx.cn/vm/OvwfYFx.aspx#).
+(Downloading links will show up automatically after submitting the request)
 
 An example of initializing the model and loading the pretrained weights can be found at: [Zeroshot Transfer](https://github.com/jlianglab/Ark/blob/main/Ark_Plus/Zeroshot/Ark%2Bzeroshot-pred.ipynb)
 
