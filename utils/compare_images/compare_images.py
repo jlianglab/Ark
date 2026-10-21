@@ -7,7 +7,7 @@ import numpy as np
 from PIL import Image
 import imagehash
 
-# python compare_images.py  --rsna-dir /data/jliang12/jpang12/dataset/rsna-pneumonia-detection-challenge/stage_2_train_images_png/  --nih-dir /data/jliang12/dongaoma/ChestX-ray14/images/  --hash-type phash  --max-hash-diff 2 --pixel-threshold 0.01  --max-workers 8 --output leakage_results.txt
+# python compare_images.py  --rsna-dir /data/rsna-pneumonia-detection-challenge/stage_2_train_images_png/  --nih-dir /data/ChestX-ray14/images/  --hash-type phash  --max-hash-diff 2 --pixel-threshold 0.1  --max-workers 8 --output leakage_results.txt
 def parse_args():
     """Parse command-line arguments for two-stage duplicate image detection."""
     parser = argparse.ArgumentParser(
@@ -141,7 +141,7 @@ def normalize_image(image):
     return (image - min_val) / (max_val - min_val)
 
 
-def verify_pixel_similarity(candidate_pair, threshold=0.01):
+def verify_pixel_similarity(candidate_pair, threshold=0.1):
     """
     Stage 2 Verification: Perform pixel-by-pixel similarity check on candidate pair.
     Returns candidate_pair if confirmed duplicate, otherwise None.
